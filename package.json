@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "jest --verbose"
   },
   "repository": {
@@ -15,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/hfmckenna/full-stack-open-part-4/issues"
   },
-  "homepage": "https://github.com/hfmckenna/full-stack-open-part-4#readme"
+  "homepage": "https://github.com/hfmckenna/full-stack-open-part-4#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.6",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
 }
