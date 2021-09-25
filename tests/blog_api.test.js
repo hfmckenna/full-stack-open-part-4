@@ -73,6 +73,17 @@ test("blog without url is not added", async () => {
   expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length);
 });
 
+test("likes value defaults to zero if missing", async () => {
+  const newBlog = {
+    title: "Windsor Castle",
+    author: "Giles Brandreth",
+    url: "https://example.com/windsor",
+  };
+
+  const blog = await api.post("/api/blogs").send(newBlog);
+  expect(blog.body.likes).toEqual(0);
+});
+
 afterAll(() => {
   mongoose.connection.close();
 });
