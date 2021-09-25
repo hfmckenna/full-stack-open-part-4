@@ -60,14 +60,25 @@ test("a valid blog can be added ", async () => {
   expect(titles).toContain("Theory Of Relativity");
 });
 
-test("blog without url is not added", async () => {
-  const newBlog = {
-    title: "Test Delete",
+test("blog without title or url is not added", async () => {
+  const newBlogMissingTitleUrl = {
+    author: "Will delete soon",
+    likes: 0,
+  };
+  const newBlogMissingTitle = {
+    url: "http://example.com",
+    author: "Will delete soon",
+    likes: 0,
+  };
+  const newBlogMissingUrl = {
+    title: "Test title",
     author: "Will delete soon",
     likes: 0,
   };
 
-  await api.post("/api/blogs").send(newBlog).expect(400);
+  await api.post("/api/blogs").send(newBlogMissingUrl).expect(400);
+  await api.post("/api/blogs").send(newBlogMissingTitle).expect(400);
+  await api.post("/api/blogs").send(newBlogMissingTitleUrl).expect(400);
 
   const blogsAtEnd = await helper.blogsInDb();
   expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length);
