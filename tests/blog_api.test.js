@@ -101,7 +101,19 @@ test("individual blog entries can be deleted", async () => {
 
   const blogsAtEnd = await helper.blogsInDb();
   expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length - 1);
-})
+});
+
+test("individual blog entries can have the number of likes changed", async () => {
+  const newLikes = {
+      "likes": 5
+  }
+  const blogsAtStart = await helper.blogsInDb();
+  await api.put(`/api/blogs/${blogsAtStart[0].id}`).send(newLikes).expect(200);
+  const blogsAtEnd = await helper.blogsInDb();
+
+  expect(blogsAtEnd[0].likes).toEqual(5);
+  expect(blogsAtEnd[0].likes).not.toEqual(2);
+});
 
 afterAll(() => {
   mongoose.connection.close();

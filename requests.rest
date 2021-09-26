@@ -5,14 +5,11 @@ GET http://localhost:3003/api/blogs
 GET http://localhost:3003/api/blogs/614f1354ada571be52a00756
 
 ### Put
-PUT http://localhost:3003/api/blogs/614f1354ada571be52a00756 HTTP/1.1
+PUT http://localhost:3003/api/blogs/614f1371ada571be52a00758 HTTP/1.1
 content-type: application/json
 
 {
-  "title": "Test Houses",
-  "author": "John Morrison",
-  "url": "https://example.com/test",
-  "likes": 2
+  "likes": 5
 }
 
 ### Post
