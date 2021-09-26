@@ -95,6 +95,14 @@ test("likes value defaults to zero if missing", async () => {
   expect(blog.body.likes).toEqual(0);
 });
 
+test("individual blog entries can be deleted", async () => {
+  const blogsAtStart = await helper.blogsInDb();
+  await api.delete(`/api/blogs/${blogsAtStart[0].id}`).expect(204);
+
+  const blogsAtEnd = await helper.blogsInDb();
+  expect(blogsAtEnd).toHaveLength(helper.initialBlogs.length - 1);
+})
+
 afterAll(() => {
   mongoose.connection.close();
 });
