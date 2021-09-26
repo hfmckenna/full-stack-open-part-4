@@ -23,5 +23,15 @@ content-type: application/json
   "likes": 14
 }
 
+### Post User
+POST http://localhost:3003/api/users/ HTTP/1.1
+content-type: application/json
+
+{
+  "username": "h",
+  "name": "Huw",
+  "password": "abc"
+}
+
 ### Delete
 DELETE http://localhost:3003/api/blogs/614f1354ada571be52a00756

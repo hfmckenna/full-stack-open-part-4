@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const uniqueValidator = require("mongoose-unique-validator");
 
 const blogSchema = new mongoose.Schema({
   title: {
@@ -21,10 +20,8 @@ const blogSchema = new mongoose.Schema({
     required: false,
     default: 0,
   },
+  user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
-
-// Apply the uniqueValidator plugin to blogSchema.
-blogSchema.plugin(uniqueValidator);
 
 blogSchema.set("toJSON", {
   transform: (document, returnedObject) => {

@@ -31,12 +31,16 @@ blogsRouter.put("/:id", async (request, response, next) => {
   const body = request.body;
 
   const newLikes = {
-    likes: body.likes
+    likes: body.likes,
   };
 
-  const updatedBlog = await Blog.findByIdAndUpdate(request.params.id, newLikes, {
-    new: true,
-  });
+  const updatedBlog = await Blog.findByIdAndUpdate(
+    request.params.id,
+    newLikes,
+    {
+      new: true,
+    }
+  );
   response.json(updatedBlog);
 });
 
