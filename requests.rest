@@ -17,10 +17,10 @@ POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 
 {
-  "title": "This Place",
-  "author": "Linda McGuire",
-  "url": "https://example.com/place",
-  "likes": 14
+  "title": "Where is time?",
+  "author": "Magic Marvin",
+  "url": "https://example.com/time",
+  "likes": 6
 }
 
 ### Post User
@@ -28,9 +28,9 @@ POST http://localhost:3003/api/users/ HTTP/1.1
 content-type: application/json
 
 {
-  "username": "h",
-  "name": "Huw",
-  "password": "abc"
+  "username": "Magic Mike",
+  "name": "Michael",
+  "password": "abc213"
 }
 
 ### Delete
