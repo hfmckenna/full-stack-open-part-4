@@ -18,10 +18,10 @@ content-type: application/json
 Authorization: bearer {{token}}
 
 {
-  "title": "Where is house?",
-  "author": "Magic Moolah",
-  "url": "https://example.com/house",
-  "likes": 7
+  "title": "Where is taff?",
+  "author": "Mossy Mark",
+  "url": "https://example.com/taff",
+  "likes": 15
 }
 
 ### Post User
