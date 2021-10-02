@@ -107,3 +107,4 @@ dist
 .vs
 .vscode
 .idea
+http-client.private.env.json

@@ -15,12 +15,13 @@ content-type: application/json
 ### Post
 POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
+Authorization: bearer {{token}}
 
 {
-  "title": "Where is time?",
-  "author": "Magic Marvin",
-  "url": "https://example.com/time",
-  "likes": 6
+  "title": "Where is house?",
+  "author": "Magic Moolah",
+  "url": "https://example.com/house",
+  "likes": 7
 }
 
 ### Post User
