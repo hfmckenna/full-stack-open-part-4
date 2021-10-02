@@ -18,7 +18,7 @@ content-type: application/json
 Authorization: bearer {{token}}
 
 {
-  "title": "Where is taff?",
+  "title": "Where is house?",
   "author": "Mossy Mark",
   "url": "https://example.com/taff",
   "likes": 15
@@ -35,7 +35,7 @@ content-type: application/json
 }
 
 ### Delete
-DELETE http://localhost:3003/api/blogs/61588e92400d681377ac5e1e
+DELETE http://localhost:3003/api/blogs/61589754a8f3285404e5346d
 Authorization: bearer {{token}}
 
 ### Post Login
