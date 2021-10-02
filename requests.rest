@@ -35,7 +35,8 @@ content-type: application/json
 }
 
 ### Delete
-DELETE http://localhost:3003/api/blogs/614f1354ada571be52a00756
+DELETE http://localhost:3003/api/blogs/61588e92400d681377ac5e1e
+Authorization: bearer {{token}}
 
 ### Post Login
 POST http://localhost:3003/api/login
