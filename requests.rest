@@ -29,9 +29,9 @@ POST http://localhost:3003/api/users/ HTTP/1.1
 content-type: application/json
 
 {
-  "username": "Magic Mike",
-  "name": "Michael",
-  "password": "abc213"
+  "username": "hugh",
+  "name": "hugh",
+  "password": "abc"
 }
 
 ### Delete
@@ -43,6 +43,10 @@ POST http://localhost:3003/api/login
 content-type: application/json
 
 {
-  "username": "Magic Mike",
-  "password": "abc213"
+  "username": "hugh",
+  "password": "abc"
 }
+
+### Reset Test DB
+POST http://localhost:3003/testing/reset
+content-type: application/json
