@@ -10,16 +10,10 @@ const userSchema = new mongoose.Schema({
   },
   name: String,
   passwordHash: String,
-  blogs: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Blog",
-    },
-  ],
 });
 
 // Apply the uniqueValidator plugin to userSchema.
-userSchema.plugin(uniqueValidator)
+userSchema.plugin(uniqueValidator);
 
 userSchema.set("toJSON", {
   transform: (document, returnedObject) => {
